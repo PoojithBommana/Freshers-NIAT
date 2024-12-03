@@ -1,11 +1,11 @@
 import React from 'react';
 import { Menu, X, PartyPopper } from 'lucide-react';
-
+import {Link} from "react-router-dom"
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const navItems = [
-    { href: "#home", label: "Home" },
+    { href: "/", label: "Home" },
     { href: "#activities", label: "Schedule" },
     { href: "#highlights", label: "Highlights" },
     { href: "#gallery", label: "Gallery" },
@@ -26,13 +26,13 @@ export function Navbar() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.href}
-                  href={item.href}
+                  to={item.href}
                   className="hover:bg-purple-700 px-3 py-2 rounded-md transition-colors"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

@@ -17,10 +17,7 @@ const images = [
     url: "https://images.unsplash.com/photo-1528605248644-14dd04022da1",
     caption: "Group Activities"
   },
-  {
-    url: "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a",
-    caption: "Fun Moments"
-  },
+
   {
     url: "https://images.unsplash.com/photo-1496024840928-4c417adf211d",
     caption: "Campus Life"

@@ -1,12 +1,13 @@
-import React from 'react';
+// import React from 'react';
 import { Clock, User } from 'lucide-react';
-
+import { Link } from "react-router-dom"
 interface ActivityCardProps {
+  id:any;
   title: string;
   time: string;
   description: string;
   location: string;
-  category: 'cultural' | 'sports' | 'technical' | 'fun';
+  category: 'cultural' | 'sports' | 'technical' ;
   poc?: string;
   subPoc?: string;
 }
@@ -15,10 +16,10 @@ const categoryColors = {
   cultural: 'bg-pink-100 text-pink-800',
   sports: 'bg-green-100 text-green-800',
   technical: 'bg-blue-100 text-blue-800',
-  fun: 'bg-yellow-100 text-yellow-800'
+  
 };
 
-export function ActivityCard({ title, time, description, location, category, poc, subPoc }: ActivityCardProps) {
+export function ActivityCard({ id,title, time, description, location, category }: ActivityCardProps) {
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
       <div className="p-6">
@@ -32,21 +33,18 @@ export function ActivityCard({ title, time, description, location, category, poc
           </div>
           <span className={`px-3 py-1 rounded-full text-sm font-medium ${categoryColors[category]}`}>
             {category.charAt(0).toUpperCase() + category.slice(1)}
+            
           </span>
         </div>
         <p className="text-gray-600 mb-4">{description}</p>
-        <div className="flex flex-col gap-1">
-          <div className="text-sm text-gray-500">
-            📍 {location}
-          </div>
-          {poc && (
-            <div className="text-sm text-gray-500 flex items-center">
-              <User className="w-4 h-4 mr-1" />
-              POC: {poc}
-              {subPoc && ` (Sub-POC: ${subPoc})`}
-            </div>
-          )}
-        </div>
+        <Link to={`/activity/${id}`}>
+        <button
+            // href="#register"
+            className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition-colors"
+          >
+            Register Now
+          </button>
+          </Link>
       </div>
     </div>
   );

@@ -3,6 +3,10 @@ import { Calendar, MapPin } from 'lucide-react';
 import { CountdownTimer } from './CountdownTimer';
 
 export function Hero() {
+
+
+
+
   return (
     <div id="home" className="relative min-h-screen flex items-center justify-center">
       <div className="absolute inset-0">
@@ -31,21 +35,10 @@ export function Hero() {
           </div>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#register"
-            className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition-colors"
-          >
-            Register Now
-          </a>
-          <a
-            href="#activities"
-            className="inline-block bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-8 rounded-full transition-colors backdrop-blur-sm"
-          >
-            View Schedule
-          </a>
-        </div>
+       
       </div>
     </div>
   );
 }
+
+// Countdown Timer Script
