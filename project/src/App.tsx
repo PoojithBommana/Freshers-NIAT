@@ -8,14 +8,15 @@ import { Sponsors } from "./components/Sponsors";
 import { FAQ } from "./components/FAQ";
 import { Contact } from "./components/Contact";
 import Leaderboard from "./components/activities/leaderboard";
+import Testimonials from "./components/carousal";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{backgroundColor: "white"}}>
       <Hero />
       <ActivitiesSection />
       <Highlights />
-      <Gallery />
+      <Testimonials/>
       <Leaderboard />
       {/* <Sponsors /> */}
       <FAQ />

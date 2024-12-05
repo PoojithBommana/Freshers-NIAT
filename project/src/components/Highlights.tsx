@@ -5,30 +5,30 @@ export function Highlights() {
   const highlights = [
     {
       icon: <Music className="w-8 h-8" />,
-      title: "Live Music",
-      description: "Groove to the beats of our amazing DJ and live band performances"
+      title: "Perfomances",
+      description: "A Showcase of Talent, a Celebration of Art."
     },
     {
       icon: <Gift className="w-8 h-8" />,
       title: "Exciting Prizes",
-      description: "Win amazing prizes in various competitions and lucky draws"
+      description: "The Thrill of Winning Starts Here."
     },
     {
       icon: <Utensils className="w-8 h-8" />,
-      title: "Gourmet Food",
-      description: "Enjoy a delicious spread of multi-cuisine dishes"
+      title: "Ramp Walk",
+      description: "Where Style Meets The Spotlight."
     },
     {
       icon: <Camera className="w-8 h-8" />,
       title: "Photo Booth",
-      description: "Capture memories with friends at our themed photo booth"
+      description: "Snap it, Share it, Cherish it Forever."
     }
   ];
 
   return (
     <div id="highlights" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-purple-800">Event Highlights</h2>
+        <h1 className="text-4xl font-bold text-center mb-12 text-purple-800">Event Highlights</h1>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {highlights.map((item, index) => (

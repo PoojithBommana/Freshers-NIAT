@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu, X, PartyPopper } from 'lucide-react';
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -9,7 +10,6 @@ export function Navbar() {
     { href: "#activities", label: "Schedule" },
     { href: "#highlights", label: "Highlights" },
     { href: "#gallery", label: "Gallery" },
-    { href: "#sponsors", label: "Sponsors" },
     { href: "#faq", label: "FAQ" },
     { href: "#contact", label: "Contact" }
   ];
@@ -20,23 +20,23 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <PartyPopper className="h-8 w-8 mr-2" />
-            <span className="font-bold text-xl">NIAT Freshers 2024</span>
+            <span className="font-bold text-xl">Starlit 2024</span>
           </div>
           
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  className="hover:bg-purple-700 px-3 py-2 rounded-md transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-6 ml-10">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                className="hover:bg-purple-700 px-3 py-2 rounded-md transition-colors"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
           
+          {/* Hamburger button for mobile view */}
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="p-2">
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -45,9 +45,10 @@ export function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden bg-purple-800">
+          <div className="flex flex-col justify-center items-center px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <a
                 key={item.href}

@@ -2,28 +2,20 @@ import React from 'react';
 
 const faqs = [
   {
-    question: "What is the dress code for the event?",
-    answer: "The dress code is smart casual. Feel free to dress comfortably while maintaining a presentable appearance."
+    question: "What is the Dress code ?",
+    answer: "Starlit Event dress code is inspired by Tollywood trends from 2010 to 2024." 
   },
   {
-    question: "Can I participate in multiple activities?",
-    answer: "Yes, you can participate in multiple activities as long as their timings don't overlap."
+    question: "What is the event duration ?",
+    answer: "Total duration of the event will be 6 hours starting from 12PM to 6PM."
   },
   {
-    question: "Are refreshments provided?",
-    answer: "Yes, lunch and refreshments will be provided throughout the day for all participants."
+    question: "Can you participate in multiple activities ?",
+    answer: "No, a single student can only participate in only one activity."
   },
   {
-    question: "Do I need to bring any equipment for the activities?",
-    answer: "All necessary equipment will be provided. Just bring your enthusiasm!"
-  },
-  {
-    question: "Is there a registration fee?",
-    answer: "No, the event is free for all NIAT students."
-  },
-  {
-    question: "Can I bring guests?",
-    answer: "Unfortunately, the event is exclusively for NIAT students and faculty."
+    question: "Is there an entry fee ?",
+    answer: "No, The event is only conducted for students."
   }
 ];
 
@@ -31,7 +23,7 @@ export function FAQ() {
   return (
     <div id="faq" className="py-20 bg-purple-50">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-4 text-purple-900">Frequently Asked Questions</h2>
+        <h1 className="text-4xl font-bold text-center mb-4 text-purple-900">Frequently Asked Questions</h1>
         <p className="text-center text-gray-600 mb-12">Got questions? We've got answers!</p>
         
         <div className="space-y-6">

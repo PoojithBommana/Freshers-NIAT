@@ -7,6 +7,7 @@ import { Contact } from './components/Contact.tsx';
 
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import { ActivityDetails } from './components/activities/ActivityDetails.tsx';
+import Quizzotopia from './components/quizzotopia.tsx';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Router>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/activity/IndoorGames" element={<ActivityDetails />} />
+        <Route path="/activity/Quizzotopia" element={<Quizzotopia />} />
         {/* <Route path="/register" element={<Registration />} /> */}
       </Routes>
       <Contact />
